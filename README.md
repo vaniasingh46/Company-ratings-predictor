@@ -2,29 +2,34 @@
 
 ## Overview
 
-The Company Ratings Predictor is a Machine Learning project that predicts a company's rating based on various company-related features. The project demonstrates the complete machine learning workflow, including data preprocessing, model training, evaluation, and prediction through a user-friendly interface.
+Company Ratings Predictor is an end-to-end Machine Learning project that predicts company ratings using company-related information collected through web scraping. The project covers the complete ML pipeline, including data collection, data preprocessing, model training, evaluation, and prediction.
 
-## Features
+## Project Workflow
 
-* Data preprocessing and cleaning
-* Machine Learning model training
-* Company rating prediction
-* Interactive user interface
-* Model persistence using Joblib
+### 1. Web Scraping
 
-## Project Structure
+Data was collected from online sources using web scraping techniques. Relevant company information was extracted and stored for further analysis.
 
-projectml/
+### 2. Data Preprocessing
 
-├── frontend.py
+The collected data was cleaned and prepared for machine learning by:
 
-├── company_rating_model.pkl
+* Handling missing values
+* Removing inconsistencies
+* Selecting relevant features
+* Converting data into a suitable format for model training
 
-├── dataset.csv
+### 3. Model Training
 
-├── requirements.txt
+A machine learning model was trained using the processed dataset to learn relationships between company features and company ratings.
 
-└── README.md
+### 4. Model Evaluation
+
+The model's performance was evaluated using regression metrics to measure prediction accuracy.
+
+### 5. Prediction Interface
+
+A user-friendly interface was developed to allow users to enter company information and receive predicted company ratings.
 
 ## Technologies Used
 
@@ -34,57 +39,63 @@ projectml/
 * Scikit-learn
 * Joblib
 * Streamlit
+* Web Scraping
+* Git & GitHub
 
-## Machine Learning Workflow
+## Project Structure
 
-### 1. Data Collection
+```text
+projectml/
+│
+├── frontend.py
+├── company_rating_model.pkl
+├── dataset.csv
+├── requirements.txt
+└── README.md
+```
 
-The dataset contains company-related information used for predicting ratings.
+## Features
 
-### 2. Data Preprocessing
-
-* Handling missing values
-* Feature selection
-* Data transformation
-* Preparing data for model training
-
-### 3. Model Training
-
-A machine learning model was trained on the processed dataset to learn patterns between company features and ratings.
-
-### 4. Model Evaluation
-
-The model performance was evaluated using standard regression metrics.
-
-### 5. Prediction
-
-Users can input company details and obtain predicted company ratings through the application interface.
+* Automated data collection through web scraping
+* Data cleaning and preprocessing
+* Machine learning-based rating prediction
+* Interactive prediction interface
+* Model persistence using Joblib
 
 ## Installation
 
 Clone the repository:
 
+```bash
 git clone https://github.com/vaniasingh46/Company-ratings-predictor.git
+```
 
 Move to the project directory:
 
+```bash
 cd Company-ratings-predictor
+```
 
 Install dependencies:
 
+```bash
 pip install -r requirements.txt
+```
 
-## Running the Application
+## Running the Project
 
-Run the Streamlit application:
-
+```bash
 streamlit run frontend.py
+```
 
-The application will open automatically in your browser.
+The application will start in your browser and allow users to predict company ratings.
 
 ## Future Improvements
 
-* Improve prediction accuracy with additional data
-* Deploy the application online
+* Collect larger datasets through web scraping
+* Improve prediction accuracy
 * Add more company-related features
-* Implement advanced machine learning models
+* Deploy the application online
+* Explore advanced machine learning models
+*Improve frontend
+
